@@ -57,7 +57,8 @@ plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG", col = "green")
 
 # part h: Make histogram of mpg (fill with green)
 #     note: make sure only 10 bars
-
+hist(mpg, col="green", breaks=10) # got help from friend.
+                                  # not sure why 10 with only 9 cats
 
 
 # part i: use pairs(), generate matrix plot, for each combo
