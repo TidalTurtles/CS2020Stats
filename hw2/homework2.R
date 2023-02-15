@@ -46,14 +46,14 @@ colnames(Auto) # prints the 9 names
 
 # part f: use attach() then plot cylindars/mpg
 attach(Auto)
-plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG") # loos weird so going to change
+plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG") # looks weird so going to change
 
 
 # part g: convert 'cylindars' to factor and plot
 #     note: Make sure the results are draw with green color and the y and x axis of the graph 
 #           has “CYLINDERS” and “MPG” respectively
-
-
+Auto$cylinders <- as.factor(Auto$cylinders)
+plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG", col = "green")
 
 # part h: Make histogram of mpg (fill with green)
 #     note: make sure only 10 bars
