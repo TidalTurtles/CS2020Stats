@@ -11,8 +11,8 @@
 ###
 #first set working directory to this one
 #also can set with Rstudio but did in case whoever grades wants to use this instead
-setwd("/Users/noah/Desktop/school/Spring 23/CS2020Stats/hw2")
-print(getwd())
+#setwd("/Users/noah/Desktop/school/Spring 23/CS2020Stats/hw2")
+#print(getwd())
 ###
 
 ### Packages
@@ -55,6 +55,7 @@ plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG") # looks weird s
 Auto$cylinders <- as.factor(Auto$cylinders)
 plot(Auto$cylinders, Auto$mpg, xlab = "Cylinders", ylab = "MPG", col = "green")
 
+
 # part h: Make histogram of mpg (fill with green)
 #     note: make sure only 10 bars
 hist(mpg, col="green", breaks=10) # got help from friend.
@@ -63,10 +64,10 @@ hist(mpg, col="green", breaks=10) # got help from friend.
 
 # part i: use pairs(), generate matrix plot, for each combo
 #     hint on assignment page!!
-
+pairs(~ mpg + displacement + horsepower + weight + acceleration, data = Auto) #gives 50+ warnings?!?!
 
 
 # part j: report descriptive statistics for all fields
-
+summary(Auto)
 
 
